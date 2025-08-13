@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Dashboard</title>
+  <link id="styleLink" rel="stylesheet" href="styles/login.css" />
+</head>
+<body>
+  <div id="loginForm" style="display: none;">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="dashboardContainer" style="display: none;">
+    <h2>Welcome to the Dashboard</h2>
+       <div class="sidebar" id="sidebar">
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+      <h2>Menu</h2>
+      <div class="nav-btn" onclick="loadPage('home')">Home</div>
+      <div class="nav-btn" onclick="loadPage('attendance')">Attendance</div>
+      <div class="nav-btn" onclick="loadPage('quizzes')">Quizzes</div>
+    </div>
+    <div class="content" id="content">
+      <h2>Welcome Prof, <span id="teacherName"></span></h2>
+      <p>Select a section from the sidebar to begin.</p>
+    </div>
+  </div>
+
+  <script type="module" src="init.js"></script>
+</body>
+</html>
